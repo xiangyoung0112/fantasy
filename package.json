@@ -1,0 +1,1 @@
+{"name":"fantasy-matchup-local","version":"1.1.0","private":true,"scripts":{"start":"node server.mjs","build":"node build.mjs","test":"node --test tests/*.test.mjs"},"engines":{"node":">=22.13"}}

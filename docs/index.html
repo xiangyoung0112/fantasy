@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>對戰研究室 · NBA Fantasy</title>
+  <style id="bundle-style">:root{--bg:#f8f9f6;--surface:#fff;--ink:#102b24;--muted:#79837e;--line:#e4e9e3;--lime:#b3f65b;--green:#347b36;--pink:#db4d7c;--softgreen:#edf9df;--softpink:#fff0f4;--radius:12px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Segoe UI','Microsoft JhengHei',sans-serif;font-size:14px;line-height:1.5}button,input,select{font:inherit}button,select{cursor:pointer}button{border:1px solid var(--line);background:#fff;border-radius:8px;color:var(--ink);padding:10px 15px;font-weight:600}button:hover{border-color:#95af99;background:#f4f8f0}button:disabled{opacity:.4;cursor:default}button.primary{background:var(--lime);border-color:var(--lime)}button.dark{background:var(--ink);color:#fff}button.danger{color:#b22e50}input,select{min-width:0;border:1px solid #dce3dd;background:#fff;color:var(--ink);border-radius:7px;padding:10px 12px}input:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid #92ce47;outline-offset:2px}input[type=checkbox]{accent-color:var(--green);width:17px;height:17px}h1,h2,h3,p{margin-top:0}h1{font-size:34px;letter-spacing:-1px;margin-bottom:5px;line-height:1.3}h2{font-size:18px;margin-bottom:16px}h3{font-size:15px;margin-bottom:10px}.muted{color:var(--muted)}.small{font-size:12px}.shell{display:grid;grid-template-columns:216px minmax(0,1fr);min-height:100vh}.sidebar{background:#0e3027;color:#eef6ed;padding:28px 18px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:10px;margin:4px 3px 30px}.brand svg{width:47px;height:47px;color:var(--lime);flex-shrink:0}.brand b{font-size:23px;letter-spacing:-.7px;line-height:1.1}.brand span{font-size:12px;color:#c4d4c9;display:block;margin-top:5px}.league-switch{width:100%;background:#173f32;color:#fff;border-color:#315443;font-size:12px;margin-bottom:24px;padding:11px 7px}.nav{display:flex;flex-direction:column;gap:8px}.nav button{display:flex;gap:12px;align-items:center;text-align:left;background:transparent;color:#cbd9d1;border:0;padding:13px 14px;font-size:14px;font-weight:500}.nav button.active{background:#294d32;color:var(--lime);box-shadow:inset 3px 0 var(--lime)}svg.icon{width:20px;height:20px;vertical-align:middle;flex-shrink:0}.storage{margin-top:auto;padding:24px 8px 0;color:#9fb7aa;font-size:12px}.storage strong{display:block;color:#d4e4d9;font-weight:400;margin-bottom:6px}.main{padding:32px 32px 40px;min-width:0;max-width:1700px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:24px}.top p{margin:0}.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.week-control{min-width:128px}.analysis-grid{display:grid;grid-template-columns:minmax(0,1fr) 255px;gap:20px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px}.selectors{display:grid;grid-template-columns:1fr 45px 1fr;align-items:end;gap:14px;margin-bottom:20px}label.field{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:600}.selectors select{font-size:15px;width:100%;font-weight:600}.vs{text-align:center;padding-bottom:10px;font-size:17px;font-weight:700}.score-panel{display:grid;grid-template-columns:1fr 1fr;gap:24px}.score-side{border-right:1px solid var(--line);padding-right:24px}.score{font-size:78px;font-weight:750;line-height:1.1;letter-spacing:-5px;padding:8px 0 20px;text-align:center;font-variant-numeric:tabular-nums}.win{color:var(--green)}.loss{color:var(--pink)}.score .dash{color:#718076;font-size:46px;margin:0 10px}.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{padding:6px 9px;border-radius:6px;font-size:11px;font-weight:650;background:#f1f3ef}.chip.win{background:#d5f6ad}.chip.loss{background:#ffd6e3}.score-note{margin:12px 0 0;color:var(--muted);font-size:12px}.insights h3.win{margin-top:4px}.insights h3.loss{margin-top:22px}.insights p{font-size:13px;line-height:1.8;margin-bottom:0}.panel-heading{display:flex;justify-content:space-between;align-items:baseline;gap:15px;margin-bottom:10px}.panel-heading h2{margin:0}.scroll{overflow:auto}.table{width:100%;border-collapse:collapse;white-space:nowrap;font-variant-numeric:tabular-nums}.table th{font-weight:500;color:#6b786e;background:#f6f8f4;font-size:12px;padding:11px 10px;text-align:left}.table td{padding:11px 10px;border-bottom:1px solid #edf0eb;font-size:13px}.table tbody tr:last-child td{border-bottom:0}.table .num{text-align:right}.table .center{text-align:center}.table .stat{font-weight:650}.table .sub{display:block;font-size:10px;color:var(--muted);font-weight:400}.bar{width:130px;height:7px;background:#edf0e9;border-radius:9px;position:relative;margin:auto;overflow:hidden}.bar::after{content:'';height:12px;width:1px;background:#aab8a4;left:50%;position:absolute;top:-2px}.bar span{display:block;height:100%;position:absolute;border-radius:8px;background:var(--green)}.bar span.loss{background:var(--pink)}.opponents{height:fit-content}.opponents button{width:100%;display:flex;align-items:center;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:13px 5px;font-size:12px;gap:9px;font-weight:400}.opponents button.selected{background:var(--softgreen);border-radius:6px}.opponents .record{margin-left:auto;font-weight:650;white-space:nowrap}.opponents .teamname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.empty{padding:64px 25px;text-align:center}.empty svg{width:44px;height:44px;color:#94a98b;margin-bottom:16px}.empty h2{font-size:23px}.empty p{color:var(--muted);max-width:470px;margin:0 auto 24px;line-height:1.9}.notice{background:#f0f5e9;padding:12px 15px;border-radius:8px;font-size:12px;color:#5a6d50;margin:12px 0 18px}.form-row{display:flex;gap:14px;align-items:end;flex-wrap:wrap;margin-bottom:20px}.form-row .field{min-width:125px}.entry-table th{position:sticky;top:0;z-index:1}.entry-table th:first-child,.entry-table td:first-child{position:sticky;left:0;z-index:2;background:#fff;min-width:155px}.entry-table th:first-child{background:#f6f8f4;z-index:3}.entry-table td{padding:6px 4px}.entry-table input{width:83px;padding:9px 7px;text-align:right;border-color:#e5eae2;font-size:13px}.entry-table .pct input{width:90px}.entry-table tbody tr:focus-within{background:#f8fceF}.table-wrap{max-height:65vh;overflow:auto;border:1px solid var(--line);border-radius:8px}.entry-footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:10px;flex-wrap:wrap}.toggle{display:flex;gap:8px;align-items:center;font-size:13px}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.team-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.team-list input{width:100%}.backup-actions{display:flex;gap:10px;flex-wrap:wrap}.loading{padding:50px}.error{color:#b1274d}.long-table td{vertical-align:top}.rank-pill{font-size:11px;background:#eef2e9;color:#5a6d4d;padding:3px 6px;border-radius:4px}.filters{display:flex;gap:12px;align-items:end;flex-wrap:wrap}.filters input{width:85px}.filters select{max-width:160px}details{margin:16px 0}summary{cursor:pointer;font-size:13px;font-weight:600}details p{font-size:12px;color:var(--muted);margin-top:10px}#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:#153f2d;color:#fff;box-shadow:0 5px 25px #0002;padding:12px 24px;border-radius:8px;z-index:20;display:none;max-width:90vw}.connection-error{max-width:600px;margin:70px auto;padding:30px}.saving{opacity:.6;pointer-events:none}@media(min-width:1450px){.main{padding:38px 40px}.analysis-grid{grid-template-columns:minmax(0,1fr) 280px}}@media(max-width:1150px){.analysis-grid{grid-template-columns:minmax(0,1fr)}.opponents{display:none}.main{padding:25px}.score{font-size:72px}.bar{width:100px}}@media(max-width:760px){.shell{display:block}.sidebar{position:relative;height:auto;padding:14px 16px}.brand{margin:0 0 14px}.brand b{font-size:20px}.brand svg{height:35px;width:35px}.brand span{display:inline;margin-left:9px}.league-switch{margin:0 0 12px}.nav{flex-direction:row;gap:2px}.nav button{padding:10px 9px;font-size:12px;flex:1;justify-content:center;gap:5px}.nav button .icon{display:none}.storage{display:none}.main{padding:22px 14px}.top{align-items:flex-start;gap:12px;flex-wrap:wrap}h1{font-size:28px}.top .actions{width:100%}.panel{padding:17px}.score-panel{grid-template-columns:1fr;gap:18px}.score-side{border:0;border-bottom:1px solid var(--line);padding:0 0 19px}.score{font-size:72px}.insights{display:grid;grid-template-columns:1fr 1fr;gap:18px}.insights h3.loss{margin-top:4px}.selectors{gap:7px;grid-template-columns:1fr 26px 1fr}.selectors select{font-size:12px;padding:10px 5px}.settings-grid{grid-template-columns:1fr;gap:0}.team-list{grid-template-columns:1fr}.panel-heading{align-items:flex-start;flex-direction:column;gap:8px}.bar{width:70px}.table td,.table th{padding:10px 7px}.compare-table .bar-cell{display:none}.compare-table .sub{font-size:9px}.form-row{gap:10px}.form-row .field{min-width:110px}.entry-table td{padding:5px 3px}.entry-table td:first-child,.entry-table th:first-child{min-width:120px;max-width:150px;overflow:hidden;text-overflow:ellipsis}.empty{padding:36px 16px}}
+</style>
+</head>
+<body>
+  <div id="app"><p class="loading">正在開啟對戰研究室…</p></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script>
+    window.__INITIAL_DATA__ = {"version":1,"leagues":[{"id":"a","name":"不認真玩莓雞雞","extended":true,"season":"2026–27","myTeam":"a-1","teams":[{"id":"a-1","name":"庠宇's Primo Team"},{"id":"a-2","name":"13"},{"id":"a-3","name":"038-黑奴"},{"id":"a-4","name":"火山大隊長"},{"id":"a-5","name":"子朋's Sunshine Team"},{"id":"a-6","name":"阿堯老師"},{"id":"a-7","name":"青維's 7ucky Team"},{"id":"a-8","name":"榜屁眼’s Team"},{"id":"a-9","name":"酷冰俠"},{"id":"a-10","name":"XuAn's Fantastic Team"},{"id":"a-11","name":"社畜廣 is back"},{"id":"a-12","name":"weimay"}],"weeks":[{"number":1,"final":true,"start":"2026-10-20","end":"2026-10-25","stats":{"a-1":{"fg":0.49700000000000005,"ft":0.755,"threes":40,"pts":595,"reb":239,"ast":128,"stl":37,"blk":20,"to":77,"threePct":0.28800000000000003,"pf":85,"fgm":225,"fga":453,"ftm":105,"fta":139,"tpm":40,"tpa":139},"a-6":{"fg":0.45399999999999996,"ft":0.787,"threes":71,"pts":543,"reb":198,"ast":146,"stl":35,"blk":25,"to":84,"threePct":0.364,"pf":104,"fgm":188,"fga":414,"ftm":96,"fta":122,"tpm":71,"tpa":195},"a-2":{"fg":0.501,"ft":0.826,"threes":54,"pts":610,"reb":163,"ast":112,"stl":31,"blk":15,"to":60,"threePct":0.36199999999999993,"pf":98,"fgm":209,"fga":417,"ftm":138,"fta":167,"tpm":54,"tpa":149},"a-9":{"fg":0.44800000000000006,"ft":0.824,"threes":63,"pts":594,"reb":178,"ast":131,"stl":45,"blk":17,"to":74,"threePct":0.325,"pf":85,"fgm":207,"fga":462,"ftm":117,"fta":142,"tpm":63,"tpa":194},"a-3":{"fg":0.463,"ft":0.76,"threes":60,"pts":589,"reb":225,"ast":118,"stl":40,"blk":20,"to":77,"threePct":0.32800000000000007,"pf":104,"fgm":209,"fga":451,"ftm":111,"fta":146,"tpm":60,"tpa":183},"a-12":{"fg":0.45,"ft":0.737,"threes":51,"pts":439,"reb":184,"ast":101,"stl":44,"blk":21,"to":50,"threePct":0.37200000000000005,"pf":84,"fgm":159,"fga":353,"ftm":70,"fta":95,"tpm":51,"tpa":137},"a-4":{"fg":0.44,"ft":0.802,"threes":47,"pts":436,"reb":185,"ast":83,"stl":35,"blk":32,"to":65,"threePct":0.309,"pf":91,"fgm":148,"fga":336,"ftm":93,"fta":116,"tpm":47,"tpa":152},"a-8":{"fg":0.43200000000000005,"ft":0.762,"threes":52,"pts":545,"reb":223,"ast":158,"stl":40,"blk":34,"to":83,"threePct":0.315,"pf":91,"fgm":189,"fga":437,"ftm":115,"fta":151,"tpm":52,"tpa":165},"a-5":{"fg":0.483,"ft":0.748,"threes":60,"pts":572,"reb":231,"ast":123,"stl":45,"blk":22,"to":87,"threePct":0.395,"pf":95,"fgm":201,"fga":416,"ftm":110,"fta":147,"tpm":60,"tpa":152},"a-11":{"fg":0.43799999999999994,"ft":0.7810000000000001,"threes":45,"pts":566,"reb":183,"ast":121,"stl":45,"blk":30,"to":70,"threePct":0.302,"pf":104,"fgm":198,"fga":452,"ftm":125,"fta":160,"tpm":45,"tpa":149},"a-7":{"fg":0.484,"ft":0.723,"threes":68,"pts":648,"reb":187,"ast":153,"stl":37,"blk":19,"to":86,"threePct":0.37799999999999995,"pf":98,"fgm":234,"fga":483,"ftm":112,"fta":155,"tpm":68,"tpa":180},"a-10":{"fg":0.446,"ft":0.7440000000000001,"threes":72,"pts":611,"reb":172,"ast":112,"stl":26,"blk":23,"to":92,"threePct":0.3509999999999999,"pf":81,"fgm":220,"fga":493,"ftm":99,"fta":133,"tpm":72,"tpa":205}}},{"number":2,"final":true,"start":"2026-10-26","end":"2026-11-01","stats":{"a-1":{"fg":0.44562899786780386,"ft":0.8405797101449275,"threes":57,"pts":591,"reb":234,"ast":134,"stl":27,"blk":25,"to":67,"threePct":0.32947976878612717,"pf":95,"fgm":209,"fga":469,"ftm":116,"fta":138,"tpm":57,"tpa":173},"a-2":{"fg":0.4734607218683652,"ft":0.88,"threes":63,"pts":641,"reb":195,"ast":161,"stl":42,"blk":20,"to":70,"threePct":0.3423913043478261,"pf":86,"fgm":223,"fga":471,"ftm":132,"fta":150,"tpm":63,"tpa":184},"a-3":{"fg":0.48770491803278687,"ft":0.8145695364238411,"threes":65,"pts":664,"reb":302,"ast":157,"stl":48,"blk":32,"to":107,"threePct":0.35714285714285715,"pf":115,"fgm":238,"fga":488,"ftm":123,"fta":151,"tpm":65,"tpa":182},"a-4":{"fg":0.45714285714285713,"ft":0.8071428571428572,"threes":80,"pts":641,"reb":203,"ast":138,"stl":44,"blk":19,"to":90,"threePct":0.34782608695652173,"pf":112,"fgm":224,"fga":490,"ftm":113,"fta":140,"tpm":80,"tpa":230},"a-5":{"fg":0.44047619047619047,"ft":0.7792207792207793,"threes":64,"pts":628,"reb":253,"ast":157,"stl":56,"blk":15,"to":93,"threePct":0.32653061224489793,"pf":86,"fgm":222,"fga":504,"ftm":120,"fta":154,"tpm":64,"tpa":196},"a-6":{"fg":0.41402714932126694,"ft":0.7816091954022989,"threes":67,"pts":501,"reb":206,"ast":146,"stl":42,"blk":26,"to":68,"threePct":0.3116279069767442,"pf":99,"fgm":183,"fga":442,"ftm":68,"fta":87,"tpm":67,"tpa":215},"a-7":{"fg":0.4989106753812636,"ft":0.7671232876712328,"threes":64,"pts":634,"reb":222,"ast":162,"stl":33,"blk":22,"to":87,"threePct":0.3902439024390244,"pf":84,"fgm":229,"fga":459,"ftm":112,"fta":146,"tpm":64,"tpa":164},"a-8":{"fg":0.47,"ft":0.8524590163934426,"threes":73,"pts":647,"reb":231,"ast":127,"stl":32,"blk":35,"to":72,"threePct":0.35609756097560974,"pf":90,"fgm":235,"fga":500,"ftm":104,"fta":122,"tpm":73,"tpa":205},"a-9":{"fg":0.4666666666666667,"ft":0.75,"threes":78,"pts":690,"reb":193,"ast":153,"stl":42,"blk":23,"to":84,"threePct":0.38235294117647056,"pf":100,"fgm":231,"fga":495,"ftm":150,"fta":200,"tpm":78,"tpa":204},"a-10":{"fg":0.4496268656716418,"ft":0.7916666666666666,"threes":94,"pts":690,"reb":196,"ast":127,"stl":43,"blk":17,"to":74,"threePct":0.3700787401574803,"pf":88,"fgm":241,"fga":536,"ftm":114,"fta":144,"tpm":94,"tpa":254},"a-11":{"fg":0.4686868686868687,"ft":0.7777777777777778,"threes":80,"pts":628,"reb":187,"ast":146,"stl":34,"blk":30,"to":84,"threePct":0.39800995024875624,"pf":112,"fgm":232,"fga":495,"ftm":84,"fta":108,"tpm":80,"tpa":201},"a-12":{"fg":0.5027322404371585,"ft":0.7674418604651163,"threes":56,"pts":490,"reb":216,"ast":115,"stl":43,"blk":32,"to":73,"threePct":0.36129032258064514,"pf":96,"fgm":184,"fga":366,"ftm":66,"fta":86,"tpm":56,"tpa":155}}}]},{"id":"b","name":"興大雞雞聯盟","extended":false,"season":"2026–27","myTeam":"b-1","teams":[{"id":"b-1","name":"庠宇's Perfect Team"},{"id":"b-2","name":"我喜歡打炮"},{"id":"b-3","name":"哥白尼哥哥"},{"id":"b-4","name":"DD"},{"id":"b-5","name":"老詹's First-Rate Team"},{"id":"b-6","name":"Leo's Legendary Team"},{"id":"b-7","name":"陰莖派對🎉"},{"id":"b-8","name":"Yiou's Phenomenal Team"}],"weeks":[]},{"id":"c","name":"歐金金大聯盟","extended":false,"season":"2026–27","myTeam":"c-1","teams":[{"id":"c-1","name":"庠宇's Fascinating Team"},{"id":"c-2","name":"奕丞's Astonishing Team"},{"id":"c-3","name":"Yiou's Astounding Team"},{"id":"c-4","name":"Luka值100"},{"id":"c-5","name":"奕安的無敵艦隊"},{"id":"c-6","name":"陰莖派對"},{"id":"c-7","name":"DN's Dazzling Team"},{"id":"c-8","name":"老詹's Tip-Top Team"},{"id":"c-9","name":"哥白尼哥's Swag Team"},{"id":"c-10","name":"Leo's Legit Team"}],"weeks":[{"number":2,"final":true,"start":"2026-10-26","end":"2026-11-01","stats":{"c-1":{"fg":0.46823956442831216,"ft":0.8088235294117647,"threes":78,"pts":704,"reb":234,"ast":137,"stl":46,"blk":25,"to":77,"fgm":258,"fga":551,"ftm":110,"fta":136},"c-2":{"fg":0.5188679245283019,"ft":0.7636363636363637,"threes":44,"pts":458,"reb":179,"ast":135,"stl":33,"blk":14,"to":60,"fgm":165,"fga":318,"ftm":84,"fta":110},"c-3":{"fg":0.48187633262260127,"ft":0.8189655172413793,"threes":82,"pts":629,"reb":247,"ast":137,"stl":46,"blk":24,"to":75,"fgm":226,"fga":469,"ftm":95,"fta":116},"c-4":{"fg":0.45126353790613716,"ft":0.7988165680473372,"threes":82,"pts":717,"reb":267,"ast":146,"stl":35,"blk":29,"to":95,"fgm":250,"fga":554,"ftm":135,"fta":169},"c-5":{"fg":0.48498845265588914,"ft":0.8128654970760234,"threes":62,"pts":621,"reb":209,"ast":137,"stl":34,"blk":20,"to":78,"fgm":210,"fga":433,"ftm":139,"fta":171},"c-6":{"fg":0.438953488372093,"ft":0.8571428571428571,"threes":38,"pts":418,"reb":164,"ast":114,"stl":22,"blk":23,"to":60,"fgm":151,"fga":344,"ftm":78,"fta":91},"c-7":{"fg":0.4837962962962963,"ft":0.7404580152671756,"threes":60,"pts":575,"reb":183,"ast":97,"stl":37,"blk":30,"to":62,"fgm":209,"fga":432,"ftm":97,"fta":131},"c-8":{"fg":0.38795180722891565,"ft":0.8461538461538461,"threes":54,"pts":475,"reb":135,"ast":159,"stl":32,"blk":14,"to":91,"fgm":161,"fga":415,"ftm":99,"fta":117},"c-9":{"fg":0.47737556561085975,"ft":0.7583333333333333,"threes":36,"pts":549,"reb":253,"ast":143,"stl":33,"blk":13,"to":73,"fgm":211,"fga":442,"ftm":91,"fta":120},"c-10":{"fg":0.45951417004048584,"ft":0.7923497267759563,"threes":66,"pts":665,"reb":237,"ast":129,"stl":51,"blk":33,"to":79,"fgm":227,"fga":494,"ftm":145,"fta":183}}}]}]};
+  </script>
+  <script id="bundle-script">
+    const cats=[{key:'fg',label:'FG%',name:'投籃命中率',pct:true,pair:['fgm','fga']},{key:'ft',label:'FT%',name:'罰球命中率',pct:true,pair:['ftm','fta']},{key:'threes',label:'3PTM',name:'三分球命中數'},{key:'pts',label:'PTS',name:'得分'},{key:'reb',label:'REB',name:'籃板'},{key:'ast',label:'AST',name:'助攻'},{key:'stl',label:'STL',name:'抄截'},{key:'blk',label:'BLK',name:'阻攻'},{key:'to',label:'TO',name:'失誤',low:true},{key:'threePct',label:'3PT%',name:'三分命中率',pct:true,pair:['tpm','tpa']},{key:'pf',label:'PF',name:'個人犯規',low:true}];
+const categories=l=>cats.slice(0,l.extended?11:9);
+function value(s,c){if(!s)return null;if(c.pair){const [m,a]=c.pair;if(Number.isFinite(s[m])&&Number.isFinite(s[a]))return s[a]>0?s[m]/s[a]:null;}return Number.isFinite(s[c.key])?s[c.key]:null;}
+function compare(a,b,c){if(a===null||b===null)return null;const d=(a-b)*(c.low?-1:1);return Math.abs(d)<1e-9?0:d>0?1:-1;}
+function matchup(a,b,cs){const results=cs.map(c=>({c,a:value(a,c),b:value(b,c),result:compare(value(a,c),value(b,c),c)}));return {results,w:results.filter(x=>x.result===1).length,l:results.filter(x=>x.result===-1).length,t:results.filter(x=>x.result===0).length,missing:results.filter(x=>x.result===null).length};}
+function fmt(v,c){return v===null?'—':c.pct?(v*100).toFixed(2)+'%':Number.isInteger(v)?String(v):v.toFixed(1);}
+function aggregate(weeks,tid,c){const vals=weeks.map(w=>value(w.stats[tid],c)).filter(v=>v!==null);if(!vals.length)return {value:null,n:0,method:'無數據',sd:null};const mean=vals.reduce((a,b)=>a+b,0)/vals.length;let v=mean,method='每週平均';if(c.pair){const [m,a]=c.pair;const eligible=weeks.filter(w=>value(w.stats[tid],c)!==null);if(eligible.every(w=>Number.isFinite(w.stats[tid]?.[m])&&Number.isFinite(w.stats[tid]?.[a]))){const den=eligible.reduce((s,w)=>s+w.stats[tid][a],0);v=den?eligible.reduce((s,w)=>s+w.stats[tid][m],0)/den:null;method='依出手數加權';}else method='週命中率平均（未加權）';}return {value:v,n:vals.length,method,sd:Math.sqrt(vals.reduce((s,x)=>s+(x-mean)**2,0)/vals.length)};}
+function rank(week,tid,c,teams){const v=value(week?.stats[tid],c);if(v===null)return null;const vals=teams.map(t=>value(week.stats[t.id],c)).filter(x=>x!==null);return {rank:1+vals.filter(x=>compare(x,v,c)===1).length,n:vals.length};}
+
+const $=s=>document.querySelector(s);
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const icons={chart:'M4 19V12h3v7m4 0V8h3v11m4 0V4h3v15',table:'M4 4h16v16H4zM4 9h16M9 9v11',history:'M3 11a9 9 0 1 1 2 7M3 4v7h7m2-4v6l4 2',settings:'M4 7h16M4 17h16M8 4v6m8 4v6',plus:'M12 5v14M5 12h14',db:'M4 6c0-4 16-4 16 0s-16 4-16 0m0 0v12c0 4 16 4 16 0V6M4 12c0 4 16 4 16 0'};
+const icon=n=>`<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${icons[n]||icons.chart}"/></svg>`;
+const logo='<svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><circle cx="25" cy="25" r="22"/><path d="M3 25h44M25 3v44M10 9c19 9 19 23 0 32M40 9C21 18 21 32 40 41"/></svg>';
+let state,token,leagueId='a',page='analysis',weekNo=1,viewTeam='',opponent='',draft=null,dirty=false,saving=false,rangeFrom=1,rangeTo=30,includeOpen=false,showAttempts=false,isStatic=false;
+const league=()=>state.leagues.find(l=>l.id===leagueId);
+const week=()=>league().weeks.find(w=>w.number===weekNo);
+const cs=()=>categories(league());
+const teamName=id=>league().teams.find(t=>t.id===id)?.name||'未知球隊';
+const options=(items,selected)=>items.map(([v,t])=>`<option value="${esc(v)}" ${String(v)===String(selected)?'selected':''}>${esc(t)}</option>`).join('');
+const teamOptions=selected=>options(league().teams.map(t=>[t.id,t.name+(t.id===league().myTeam?' (我的球隊)':'')]),selected);
+function toast(msg,error=false){const el=$('#toast');el.textContent=msg;el.style.background=error?'#982944':'#153f2d';el.style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.style.display='none',4500);}
+function canLeave(){if(!dirty)return true;if(!confirm('目前有尚未儲存的修改。確定捨棄修改？'))return false;dirty=false;draft=null;return true;}
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
+async function persist(next){
+ if(saving)return false;saving=true;document.body.classList.add('saving');
+ try{
+  if(!isStatic){
+   const r=await fetch('/api/state',{method:'PUT',headers:{'Content-Type':'application/json','X-Local-Token':token},body:JSON.stringify(next)});
+   const j=await r.json();if(!r.ok)throw Error(j.error);
+   state=next;dirty=false;draft=null;toast('已儲存至本機資料庫，並保留備份');return true;
+  }else{
+   localStorage.setItem('fantasy_state',JSON.stringify(next));
+   state=next;dirty=false;draft=null;toast('已儲存至瀏覽器快取（靜態模式）');return true;
+  }
+ }catch(e){toast('儲存失敗：'+e.message,true);return false;}finally{saving=false;document.body.classList.remove('saving');}
+}
+function setWeekDefault(){
+ const l=league();
+ weekNo=l.weeks.length?Math.max(...l.weeks.map(w=>w.number)):1;
+ rangeFrom=l.weeks.length?Math.min(...l.weeks.map(w=>w.number)):1;
+ rangeTo=weekNo;
+ viewTeam=l.myTeam;
+ opponent=l.teams.find(t=>t.id!==viewTeam)?.id||'';
+}
+function shell(content){
+ const l=league();
+ const storageNotice=isStatic?`<strong>靜態／分享模式</strong>瀏覽器本機儲存<br>可離線使用 · 支援匯出入<br><br>v1.1 · ${l.teams.length} 隊 / ${cs().length} 項`:`<strong>資料儲存在你的電腦</strong>SQLite 本機資料庫<br>不會上傳 · 可離線使用<br><br>v1.1 · ${l.teams.length} 隊 / ${cs().length} 項`;
+ $('#app').innerHTML=`<div class="shell"><aside class="sidebar"><div class="brand">${logo}<div><b>MATCHUP</b><span>對戰研究室</span></div></div><label class="small" for="leagueSelect">目前聯盟</label><select id="leagueSelect" class="league-switch">${options(state.leagues.map(x=>[x.id,x.name]),leagueId)}</select><nav class="nav" aria-label="主要功能">${[['analysis','chart','對戰分析'],['entry','table','每週數據'],['history','history','長期強弱'],['settings','settings','聯盟設定']].map(([id,i,t])=>`<button data-page="${id}" class="${page===id?'active':''}">${icon(i)}${t}</button>`).join('')}</nav><div class="storage">${icon('db')}${storageNotice}</div></aside><main class="main">${content}</main></div>`;
+ $('#leagueSelect').onchange=e=>{const v=e.target.value;if(canLeave()){leagueId=v;setWeekDefault();render();}else e.target.value=leagueId;};
+ document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>navigate(b.dataset.page));
+}
+function navigate(p){if(!canLeave())return;page=p;render();}
+function header(title,subtitle,actions=''){return `<header class="top"><div><h1>${title}</h1><p class="muted small">${esc(subtitle)}</p></div><div class="actions">${actions}</div></header>`;}
+function weekSelect(){const ws=league().weeks.slice().sort((a,b)=>b.number-a.number);return `<label class="field">比較週次<select id="weekSelect" class="week-control">${options(ws.map(w=>[w.number,`第 ${w.number} 週${w.final?' · 已結算':' · 進行中'}`]),weekNo)}</select></label>`;}
+function empty(title,text,button='輸入第一週數據'){return `<section class="panel empty">${icon('table')}<h2>${title}</h2><p>${text}</p><button class="primary" data-page="entry">${icon('plus')} ${button}</button></section>`;}
+function analysis(){
+ const l=league(),w=week();
+ if(!w){shell(header('對戰分析',`${l.name} · ${l.season}`)+empty('從第一週開始，認識球隊優勢','每週填入所有球隊的成績，就能模擬任兩隊的對決結果，找出各項數據差距。'));return;}
+ if(!viewTeam||!l.teams.some(t=>t.id===viewTeam))viewTeam=l.myTeam;
+ if(opponent===viewTeam||!l.teams.some(t=>t.id===opponent))opponent=l.teams.find(t=>t.id!==viewTeam)?.id||'';
+ const m=matchup(w.stats[viewTeam],w.stats[opponent],cs());
+ const wins=m.results.filter(x=>x.result===1),losses=m.results.filter(x=>x.result===-1);
+ const insight=arr=>arr.length?arr.map(x=>`${x.c.label} ${x.c.low?'較少':'領先'} ${x.c.pct?(Math.abs(x.a-x.b)*100).toFixed(2)+' 個百分點':Math.abs(x.a-x.b)}`).map(s=>`<p>• ${esc(s)}</p>`).join(''):'<p class="muted">目前沒有可判定的項目。</p>';
+ const partial=m.missing>0;
+ const rows=m.results.map(x=>{
+  const r=rank(w,viewTeam,x.c,l.teams);
+  const denom=Math.max(Math.abs(x.a||0),Math.abs(x.b||0),.001);
+  const bar=Math.min(48,Math.abs((x.a||0)-(x.b||0))/denom*90);
+  return `<tr><td class="stat">${x.c.label}<span class="sub">${x.c.name}${x.c.low?' ↓':''}</span></td><td class="num">${fmt(x.a,x.c)}</td><td class="bar-cell"><div class="bar">${x.result!==null&&x.result!==0?`<span class="${x.result===-1?'loss':''}" style="width:${bar}%;${x.result===1?'right':'left'}:50%"></span>`:''}</div></td><td class="num">${fmt(x.b,x.c)}</td><td class="center ${x.result===1?'win':x.result===-1?'loss':''}">${x.result===null?'待補':x.result===1?'勝':x.result===-1?'敗':'平'}</td><td class="num">${r?`${r.rank} / ${r.n}`:'—'}</td></tr>`;
+ }).join('');
+ const opponents=l.teams.filter(t=>t.id!==viewTeam).map(t=>({t,m:matchup(w.stats[viewTeam],w.stats[t.id],cs())})).sort((a,b)=>(b.m.w-b.m.l)-(a.m.w-a.m.l));
+ shell(header('對戰分析',`${l.name} · ${l.season}${w.start?' · '+w.start+' — '+w.end:''}`,weekSelect()+`<button class="primary" data-page="entry">${icon('plus')} 輸入數據</button>`)+`<div class="analysis-grid"><div><div class="selectors"><label class="field">主隊視角<select id="myView">${teamOptions(viewTeam)}</select></label><div class="vs">VS</div><label class="field">客隊／對手<select id="opponent">${options(l.teams.filter(t=>t.id!==viewTeam).map(t=>[t.id,t.name+(t.id===l.myTeam?' (我的球隊)':'')]),opponent)}</select></label></div>${!w.final?'<div class="notice">本週尚未結算，結果會隨數據更新。</div>':''}<section class="panel score-panel"><div class="score-side"><h2>${partial?'已填項目比較':'本週模擬對戰結果'}</h2><div class="score"><span class="win">${m.w}</span><span class="dash">–</span><span class="loss">${m.l}</span></div><div class="chips">${m.results.map(x=>`<span class="chip ${x.result===1?'win':x.result===-1?'loss':''}">${x.c.label} ${x.result===null?'—':x.result===1?'✓':x.result===-1?'×':'＝'}</span>`).join('')}</div><p class="score-note">${m.t} 項平手${partial?` · ${m.missing} 項資料不足，尚非完整比分`:''} · 以 ${esc(teamName(viewTeam))} 為視角</p></div><div class="insights"><div><h3 class="win">${esc(teamName(viewTeam))} 優勢</h3>${insight(wins)}</div><div><h3 class="loss">${esc(teamName(viewTeam))} 劣勢</h3>${insight(losses)}</div></div></section><section class="panel"><div class="panel-heading"><h2>${cs().length===9?'九':'十一'}項數據對比</h2><span class="muted small">TO${l.extended?'、PF':''} 越少越好</span></div><div class="scroll"><table class="table compare-table"><thead><tr><th>項目</th><th class="num">${esc(teamName(viewTeam))}</th><th class="bar-cell"></th><th class="num">${esc(teamName(opponent))}</th><th class="center">結果</th><th class="num">${esc(teamName(viewTeam))} 排名</th></tr></thead><tbody>${rows}</tbody></table></div><p class="muted small" style="margin:15px 0 0">排名採並列名次；分母為該項已有數據的球隊數。</p></section></div><aside class="panel opponents"><h2>對上全聯盟</h2><p class="muted small">${esc(teamName(viewTeam))} 的模擬勝–敗–平</p>${opponents.map(({t,m})=>`<button data-opponent="${esc(t.id)}" class="${t.id===opponent?'selected':''}"><span class="teamname">${esc(t.name)}</span><span class="record">${m.w}–${m.l}–${m.t}${m.missing?' *':''}</span></button>`).join('')}<p class="small muted" style="margin:16px 0 0">* 尚有未填項目<br>此列表為模擬結果，並非實際戰績。</p></aside></div>`);
+ $('#weekSelect').onchange=e=>{weekNo=Number(e.target.value);render();};
+ $('#myView').onchange=e=>{viewTeam=e.target.value;if(opponent===viewTeam)opponent=l.teams.find(t=>t.id!==viewTeam)?.id;render();};
+ $('#opponent').onchange=e=>{opponent=e.target.value;render();};
+ document.querySelectorAll('[data-opponent]').forEach(b=>b.onclick=()=>{opponent=b.dataset.opponent;render();});
+}
+function blankWeek(number){return {number,final:false,start:'',end:'',stats:{}};}
+function draftValue(s,c){const v=c.pct?value(s,c):s?.[c.key];return v===null||v===undefined?'':c.pct?+(v*100).toFixed(5):v;}
+function entry(){
+ const l=league();if(!draft)draft=structuredClone(week()||blankWeek(weekNo));const d=draft;
+ const optional=showAttempts?cs().filter(c=>c.pair).flatMap(c=>c.pair.map((key,i)=>({key,label:{fgm:'FGM',fga:'FGA',ftm:'FTM',fta:'FTA',tpm:'3PTM*',tpa:'3PTA'}[key],name:i?'出手數':'命中數'}))):[];
+ const fields=[...cs(),...optional];
+ shell(header('每週數據',`${l.name} · ${l.teams.length} 支球隊 · ${cs().length} 個計分項目`,`<button id="newWeek">${icon('plus')} 新增週次</button>`)+`<section class="panel"><div class="form-row"><label class="field">週次<select id="entryWeek">${options([...new Set([...l.weeks.map(w=>w.number),d.number])].sort((a,b)=>a-b).map(n=>[n,`第 ${n} 週`]),d.number)}</select></label><label class="field">開始日期<input type="date" id="startDate" value="${esc(d.start)}"></label><label class="field">結束日期<input type="date" id="endDate" value="${esc(d.end)}"></label><label class="toggle"><input type="checkbox" id="finalWeek" ${d.final?'checked':''}>本週已結算</label><label class="toggle"><input type="checkbox" id="attempts" ${showAttempts?'checked':''}>命中／出手數</label></div><div class="notice">百分比以 0–100 輸入，例如 48.2 代表 48.2%。空白表示未填，0 表示實際為零。可用 Tab 逐格輸入。${showAttempts?' 同時填命中與出手數時，命中率以兩者計算；3PTM* 應與三分球命中數相同。':''}</div><div class="table-wrap"><table class="table entry-table"><thead><tr><th>球隊</th>${fields.map(c=>`<th title="${c.name}">${c.label}${c.low?' ↓':''}${c.pct?' (%)':''}</th>`).join('')}</tr></thead><tbody>${l.teams.map(t=>`<tr><td class="stat" title="${esc(t.name)}">${esc(t.name)}${t.id===l.myTeam?' <span class="rank-pill">我</span>':''}</td>${fields.map(c=>`<td class="${c.pct?'pct':''}"><input type="number" inputmode="decimal" min="0" ${c.pct?'max="100" step="any"':'step="1" max="1000000"'} aria-label="${esc(t.name)} ${c.label}" data-team="${esc(t.id)}" data-stat="${c.key}" value="${draftValue(d.stats[t.id],c)}" placeholder="—"></td>`).join('')}</tr>`).join('')}</tbody></table></div><div class="entry-footer"><span id="saveStatus" class="muted small">${dirty?'有尚未儲存的修改':(isStatic?'修改儲存於瀏覽器':'資料僅儲存在本機')} · 留白不會計入比較</span><div class="actions"><button id="deleteWeek" class="danger" ${week()?'':'disabled'}>刪除此週</button><button id="saveWeek" class="primary">儲存本週數據</button></div></div><details><summary>如何輸入命中率與出手數？</summary><p>只填百分比也能進行單週比較。跨週分析若所有有效週次都有命中及出手數，使用加權命中率；否則顯示「週命中率平均」，不冒充加權結果。填 0 次出手時，該週命中率不計入比較。</p></details></section>`);
+ const mark=()=>{dirty=true;$('#saveStatus').textContent='有尚未儲存的修改';};
+ document.querySelectorAll('[data-stat]').forEach(el=>el.oninput=()=>{const s=d.stats[el.dataset.team]??={};const c=fields.find(c=>c.key===el.dataset.stat);if(el.value==='')delete s[c.key];else s[c.key]=Number(el.value)/(c.pct?100:1);mark();});
+ $('#startDate').onchange=e=>{d.start=e.target.value;mark();};$('#endDate').onchange=e=>{d.end=e.target.value;mark();};$('#finalWeek').onchange=e=>{d.final=e.target.checked;mark();};
+ $('#attempts').onchange=e=>{showAttempts=e.target.checked;render();};
+ $('#entryWeek').onchange=e=>{const n=Number(e.target.value);if(canLeave()){weekNo=n;render();}else e.target.value=d.number;};
+ $('#newWeek').onclick=()=>{const answer=prompt('新增第幾週？',String(Math.max(0,...l.weeks.map(w=>w.number))+1));if(answer===null)return;const n=Number(answer);if(!Number.isInteger(n)||n<1||n>1000){toast('週次須為 1–1000 的整數',true);return;}if(l.weeks.some(w=>w.number===n)){toast('此週次已存在，請從下拉選單切換',true);return;}if(canLeave()){weekNo=n;draft=blankWeek(n);dirty=true;render();}};
+ $('#saveWeek').onclick=async()=>{const invalid=[...document.querySelectorAll('[data-stat]')].find(x=>!x.checkValidity());if(invalid){invalid.reportValidity();return;}for(const s of Object.values(d.stats)){if(s.tpm!==undefined&&s.threes!==undefined&&s.tpm!==s.threes){toast('3PTM* 與三分球命中數必須一致',true);return;}}
+  const next=structuredClone(state),nl=next.leagues.find(x=>x.id===leagueId);nl.weeks=nl.weeks.filter(w=>w.number!==d.number);nl.weeks.push(structuredClone(d));if(await persist(next))render();};
+ $('#deleteWeek').onclick=async()=>{if(!confirm(`確定刪除第 ${weekNo} 週的所有球隊數據？儲存前備份會保留。`))return;const next=structuredClone(state),nl=next.leagues.find(x=>x.id===leagueId);nl.weeks=nl.weeks.filter(w=>w.number!==weekNo);if(await persist(next)){setWeekDefault();render();}};
+}
+function history(){
+ const l=league();if(!l.weeks.length){shell(header('長期強弱',`${l.name} · ${l.season}`)+empty('累積每週數據，看見穩定的強項','保存多週成績後，可比較各項平均表現、每週波動，以及對同一對手的歷史勝出頻率。'));return;}
+ if(!viewTeam||!l.teams.some(t=>t.id===viewTeam))viewTeam=l.myTeam;
+ if(opponent===viewTeam||!l.teams.some(t=>t.id===opponent))opponent=l.teams.find(t=>t.id!==viewTeam)?.id||'';
+ const weeks=l.weeks.filter(w=>w.number>=rangeFrom&&w.number<=rangeTo&&(includeOpen||w.final)).sort((a,b)=>a.number-b.number);
+ const filters=`<section class="panel"><div class="filters"><label class="field">快速選擇<select id="preset">${options([['custom','自訂範圍'],['3','最近 3 個已結算週次'],['5','最近 5 個已結算週次'],['all','所有週次']],'custom')}</select></label><label class="field">起始週<input type="number" min="1" max="1000" id="rangeFrom" value="${rangeFrom}"></label><label class="field">結束週<input type="number" min="1" max="1000" id="rangeTo" value="${rangeTo}"></label><label class="field">主隊視角<select id="historyView">${teamOptions(viewTeam)}</select></label><label class="field">對手球隊<select id="historyOpponent">${options(l.teams.filter(t=>t.id!==viewTeam).map(t=>[t.id,t.name+(t.id===l.myTeam?' (我的球隊)':'')]),opponent)}</select></label><label class="toggle"><input type="checkbox" id="includeOpen" ${includeOpen?'checked':''}>包含未結算週次</label></div></section>`;
+ let body='';
+ if(!weeks.length)body=empty('此範圍沒有可分析的週次','請調整週次範圍，或到每週數據勾選「本週已結算」。','編輯每週數據');
+ else {
+  const records=cs().map(c=>{
+   const a=aggregate(weeks,viewTeam,c),b=aggregate(weeks,opponent,c);
+   const pairs=weeks.map(w=>compare(value(w.stats[viewTeam],c),value(w.stats[opponent],c),c)).filter(x=>x!==null);
+   const win=pairs.filter(x=>x===1).length,loss=pairs.filter(x=>x===-1).length,tie=pairs.filter(x=>x===0).length;
+   const all=l.teams.map(t=>aggregate(weeks,t.id,c).value).filter(v=>v!==null);
+   return {c,a,b,win,loss,tie,n:pairs.length,rank:a.value===null?null:1+all.filter(v=>compare(v,a.value,c)===1).length,total:all.length};
+  });
+  const strengths=records.filter(r=>r.n>=2&&r.win/r.n>=.6).map(r=>r.c.label),weaknesses=records.filter(r=>r.n>=2&&r.loss/r.n>=.6).map(r=>r.c.label);
+  body=`<div class="notice">採用 ${weeks.length} 個週次：${weeks.map(w=>'W'+w.number+(w.final?'':'（未結算）')).join('、')}。各項僅比較雙方同週都有數據的紀錄；歷史頻率不代表未來勝率。</div><section class="panel"><div class="panel-heading"><h2>對 ${esc(teamName(opponent))} 的歷史表現</h2><span class="muted small">主隊：${esc(teamName(viewTeam))}</span></div><div class="insights" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:22px 0"><div><h3 class="win">較常勝出的項目</h3><p>${strengths.length?strengths.join('、'):'尚無足夠紀錄符合條件'}</p></div><div><h3 class="loss" style="margin-top:4px">較常落後的項目</h3><p>${weaknesses.length?weaknesses.join('、'):'尚無足夠紀錄符合條件'}</p></div></div><p class="muted small">至少 2 次有效比較，且勝出或落後達 60% 才列入上方摘要。</p><div class="scroll"><table class="table long-table"><thead><tr><th>項目</th><th class="num">${esc(teamName(viewTeam))} 表現</th><th class="num">${esc(teamName(opponent))} 表現</th><th class="num">${esc(teamName(viewTeam))} 排名</th><th class="num">歷史勝–敗–平</th><th class="num">勝出頻率</th><th class="num">${esc(teamName(viewTeam))} 波動 σ</th></tr></thead><tbody>${records.map(r=>`<tr><td class="stat">${r.c.label}<span class="sub">${r.c.low?'越少越好':''}</span></td><td class="num">${fmt(r.a.value,r.c)}<span class="sub">${r.a.method} · ${r.a.n} 週</span></td><td class="num">${fmt(r.b.value,r.c)}<span class="sub">${r.b.method} · ${r.b.n} 週</span></td><td class="num">${r.rank===null?'—':`${r.rank} / ${r.total}`}</td><td class="num">${r.win}–${r.loss}–${r.tie}<span class="sub">有效 ${r.n} 週</span></td><td class="num ${r.n&&r.win/r.n>=.6?'win':r.n&&r.loss/r.n>=.6?'loss':''}">${r.n?(r.win/r.n*100).toFixed(0)+'%':'—'}</td><td class="num">${r.a.n>=2?fmt(r.a.sd,r.c):'—'}</td></tr>`).join('')}</tbody></table></div><p class="muted small" style="margin-top:16px">波動 σ 為有效週數據的母體標準差，越大表示週與週間差異越大；百分比波動單位為百分點。排名依各隊可用週次的彙總數值計算，週數不同時需留意。</p></section><section class="panel"><h2>${esc(teamName(viewTeam))} 對全聯盟的逐週模擬結果</h2><div class="scroll"><table class="table"><thead><tr><th>對手</th><th class="num">整場勝–敗–平</th><th class="num">有效週數</th><th class="num">整場勝出頻率</th><th>各項勝出次數 / 有效週數</th></tr></thead><tbody>${l.teams.filter(t=>t.id!==viewTeam).map(t=>{const ms=weeks.map(w=>matchup(w.stats[viewTeam],w.stats[t.id],cs()));const full=ms.filter(m=>!m.missing);const wins=full.filter(m=>m.w>m.l).length,loss=full.filter(m=>m.w<m.l).length,tie=full.filter(m=>m.w===m.l).length;return `<tr><td class="stat">${esc(t.name)}</td><td class="num">${wins}–${loss}–${tie}</td><td class="num">${full.length}</td><td class="num">${full.length?(wins/full.length*100).toFixed(0)+'%':'—'}</td><td><div class="chips">${cs().map((c,i)=>{const valid=ms.map(m=>m.results[i].result).filter(v=>v!==null);return `<span class="chip">${c.label} ${valid.filter(x=>x===1).length}/${valid.length}</span>`;}).join('')}</div></td></tr>`;}).join('')}</tbody></table></div><p class="muted small" style="margin-top:15px">整場結果只採雙方所有計分項目齊全的週次；各項頻率可採部分完整的週次。</p></section>`;
+ }
+ shell(header('長期強弱',`${l.name} · ${l.season}`)+filters+body);
+ $('#rangeFrom').onchange=e=>{rangeFrom=Math.max(1,Math.min(1000,Number(e.target.value)||1));if(rangeFrom>rangeTo)rangeTo=rangeFrom;render();};
+ $('#rangeTo').onchange=e=>{rangeTo=Math.max(rangeFrom,Math.min(1000,Number(e.target.value)||rangeFrom));render();};
+ $('#includeOpen').onchange=e=>{includeOpen=e.target.checked;render();};
+ $('#historyView').onchange=e=>{viewTeam=e.target.value;if(opponent===viewTeam)opponent=l.teams.find(t=>t.id!==viewTeam)?.id;render();};
+ $('#historyOpponent').onchange=e=>{opponent=e.target.value;render();};
+ $('#preset').onchange=e=>{if(e.target.value==='custom')return;const ws=l.weeks.filter(w=>w.final||e.target.value==='all').sort((a,b)=>a.number-b.number);if(!ws.length){toast('目前沒有已結算週次');return;}const selected=e.target.value==='all'?ws:ws.slice(-Number(e.target.value));rangeFrom=selected[0].number;rangeTo=selected.at(-1).number;if(e.target.value!=='all')includeOpen=false;render();};
+}
+async function downloadStandaloneHtml(){
+ try{
+  toast('正在打包單檔分享網頁…');
+  let css='';
+  const styleEl=document.querySelector('style#bundle-style')||document.querySelector('style');
+  if(styleEl&&styleEl.textContent.trim().length>100){css=styleEl.textContent;}
+  else{css=await fetch('./style.css').then(r=>r.text());}
+
+  let bundleJs='';
+  const scriptEl=document.querySelector('script#bundle-script');
+  if(scriptEl&&scriptEl.textContent.trim().length>100){
+   bundleJs=scriptEl.textContent;
+  }else{
+   const [l,a]=await Promise.all([fetch('./logic.js').then(r=>r.text()),fetch('./app.js').then(r=>r.text())]);
+   const cleanLogic=l.replace(/export /g,'');
+   const cleanApp=a.replace(/^import .*?;\r?\n/,'');
+   bundleJs=cleanLogic+'\n'+cleanApp;
+  }
+  const sOpen='<'+'script>', sClose='<'+'/script>', sBundle='<'+'script id="bundle-script">';
+  const payload=JSON.stringify(state);
+  const html=`<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>對戰研究室 · NBA Fantasy</title>
+  <style id="bundle-style">${css}</style>
+</head>
+<body>
+  <div id="app"><p class="loading">正在開啟對戰研究室…</p></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  ${sOpen}
+    window.__INITIAL_DATA__ = ${payload};
+  ${sClose}
+  ${sBundle}
+    ${bundleJs}
+  ${sClose}
+</body>
+</html>`;
+  const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+  const a=document.createElement('a');
+  const safeName=(league().name||'NBA-Fantasy').replace(/[\\/:*?"<>|]/g,'_');
+  a.href=URL.createObjectURL(blob);
+  a.download=`${safeName}-對戰研究室-分享版-${new Date().toLocaleDateString('sv-SE')}.html`;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  toast('已匯出單檔分享網頁！直接傳此檔案給朋友即可操作。');
+ }catch(e){toast('打包失敗：'+e.message,true);}
+}
+function settings(){
+ const l=league();
+ const hasLocalChanges=isStatic&&!!localStorage.getItem('fantasy_state');
+ shell(header('聯盟設定',`${l.name} · ${l.teams.length} 隊 / ${cs().length} 項`)+`<div class="settings-grid"><section class="panel"><h2>基本設定</h2><form id="settingsForm"><label class="field">聯盟名稱<input id="leagueName" maxlength="80" value="${esc(l.name)}" required></label><label class="field" style="margin-top:15px">賽季標籤<input id="season" maxlength="40" value="${esc(l.season)}" required></label><label class="field" style="margin-top:15px">我的球隊<select id="myTeam">${teamOptions(l.myTeam)}</select></label><div class="notice">${cs().map(c=>c.label+(c.low?' ↓':'')).join(' · ')}<br>↓ 表示越少越好。賽季標籤僅供辨識；切換新賽季請先匯出備份，再使用新的程式資料夾。</div><h3>球隊名稱</h3><div class="team-list">${l.teams.map((t,i)=>`<label class="field">球隊 ${i+1}<input data-team-name="${esc(t.id)}" value="${esc(t.name)}" maxlength="80" required></label>`).join('')}</div><button type="submit" class="primary" style="margin-top:22px">儲存聯盟設定</button></form></section><div><section class="panel"><h2>分享與備份</h2><p class="muted">可一鍵匯出單檔獨立網頁傳給朋友直接打開操作，或匯出完整 JSON 備份。</p><div class="backup-actions"><button id="exportHtml" class="primary" type="button">匯出分享網頁 (.html)</button><button id="exportBackup" class="dark" type="button">匯出備份 (JSON)</button><button id="importBackup" type="button">匯入備份 (JSON)</button><input type="file" id="backupFile" accept=".json" hidden></div>${hasLocalChanges?'<div style="margin-top:12px"><button id="resetLocal" class="danger" type="button">重設回原始預設數據</button></div>':''}<p class="small muted" style="margin:16px 0 0">• <b>分享網頁 (.html)</b>：單一檔案，朋友用手機或電腦點開即可操作，無須安裝軟體。<br>• <b>備份檔案 (.json)</b>：包含三個聯盟的所有設定與數據，建議定期存至其他磁碟。<br>• 自動備份位於程式資料夾 data/backups，保留最近 100 份。</p></section><section class="panel"><h2>目前資料</h2><table class="table"><thead><tr><th>聯盟</th><th class="num">已儲存週數</th></tr></thead><tbody>${state.leagues.map(x=>`<tr><td>${esc(x.name)}</td><td class="num">${x.weeks.length}</td></tr>`).join('')}</tbody></table></section></div></div>`);
+ $('#settingsForm').oninput=()=>dirty=true;
+ $('#settingsForm').onsubmit=async e=>{e.preventDefault();const next=structuredClone(state),nl=next.leagues.find(x=>x.id===leagueId);nl.name=$('#leagueName').value.trim();nl.season=$('#season').value.trim();nl.myTeam=$('#myTeam').value;document.querySelectorAll('[data-team-name]').forEach(el=>{nl.teams.find(t=>t.id===el.dataset.teamName).name=el.value.trim();});if(new Set(nl.teams.map(t=>t.name)).size!==nl.teams.length){toast('同一聯盟請使用不同隊名，方便辨識',true);return;}if(await persist(next)){viewTeam=nl.myTeam;if(opponent===viewTeam)opponent=league().teams.find(t=>t.id!==viewTeam).id;render();}};
+ $('#exportHtml').onclick=()=>downloadStandaloneHtml();
+ $('#exportBackup').onclick=()=>{const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.href=url;a.download='fantasy-backup-'+new Date().toLocaleDateString('sv-SE')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('已匯出完整備份 (JSON)');};
+ $('#importBackup').onclick=()=>{if(canLeave())$('#backupFile').click();};
+ $('#backupFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{if(f.size>10_000_000)throw Error('備份檔過大');const data=JSON.parse(await f.text());if(!data.leagues||data.version!==1)throw Error('不是有效的備份檔');if(!confirm('匯入將取代三個聯盟目前的所有資料。匯入前會自動備份。確定繼續？'))return;if(await persist(data)){leagueId=state.leagues[0].id;setWeekDefault();render();}}catch(err){toast('匯入失敗：'+err.message,true);}finally{e.target.value='';}};
+ if(hasLocalChanges){$('#resetLocal').onclick=()=>{if(confirm('確定清除瀏覽器快取中的修改，還原至預設數據？')){localStorage.removeItem('fantasy_state');location.reload();}};}
+}
+function render(){if(page==='entry')entry();else if(page==='history')history();else if(page==='settings')settings();else analysis();}
+async function init(){
+ if(window.__INITIAL_DATA__){
+  isStatic=true;
+  const local=localStorage.getItem('fantasy_state');
+  if(local){try{state=JSON.parse(local);}catch(e){state=window.__INITIAL_DATA__;}}
+  else{state=window.__INITIAL_DATA__;}
+  leagueId=state.leagues[0].id;setWeekDefault();render();return;
+ }
+ try{
+  const r=await fetch('/api/state');
+  if(r.ok){
+   const j=await r.json();state=j.data;token=j.token;isStatic=false;leagueId=state.leagues[0].id;setWeekDefault();render();return;
+  }
+ }catch(e){}
+ try{
+  isStatic=true;
+  const local=localStorage.getItem('fantasy_state');
+  if(local){try{state=JSON.parse(local);}catch(e){}}
+  if(!state){
+   const r=await fetch('./data.json');
+   if(!r.ok)throw new Error('無法載入 data.json');
+   state=await r.json();
+  }
+  leagueId=state.leagues[0].id;setWeekDefault();render();
+ }catch(err){
+  $('#app').innerHTML=`<section class="panel connection-error"><h1>無法載入對戰研究室資料</h1><p>若在本機使用，請確認「啟動對戰研究室.cmd」正在執行；若部署在 GitHub Pages，請確認包含 data.json 或已執行 build。</p><p class="error">${esc(err.message)}</p></section>`;
+ }
+}
+init();
+
+  </script>
+</body>
+</html>
