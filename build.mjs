@@ -70,6 +70,7 @@ const standaloneHtml = `<!doctype html>
 
 // 寫入 docs/index.html（供 GitHub Pages 的 /docs 模式直接部署）
 writeFileSync(join(root, 'docs', 'index.html'), standaloneHtml);
+writeFileSync(join(root, 'docs', '.nojekyll'), '');
 copyFileSync(join(root, 'public', 'style.css'), join(root, 'docs', 'style.css'));
 copyFileSync(join(root, 'public', 'logic.js'), join(root, 'docs', 'logic.js'));
 copyFileSync(join(root, 'public', 'app.js'), join(root, 'docs', 'app.js'));
